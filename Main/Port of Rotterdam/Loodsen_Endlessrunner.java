@@ -14,12 +14,6 @@ public class Loodsen_Endlessrunner extends World
      * 
      */
     Distance loodsDistance = new Distance();
-    Actor MakkelijkKnop = new MakkelijkKnop();
-    MakkelijkKnop Makkelijk = (MakkelijkKnop) MakkelijkKnop;
-    Actor NormaalKnop = new NormaalKnop();
-    NormaalKnop Normaal = (NormaalKnop) NormaalKnop;
-    Actor MoeilijkKnop = new MoeilijkKnop();
-    MoeilijkKnop Moeilijk = (MoeilijkKnop) MoeilijkKnop;
     public Loodsen_Endlessrunner()
     {    
         super(50,42,20,false);
@@ -68,35 +62,6 @@ public class Loodsen_Endlessrunner extends World
         addObject(new StartMenuAchtergrond(), 25, 20);
         addObject(new SleepbootTekst(), 25, 20);
         addObject(new StartKnop(), 30, 33);
-        
-        
-        addObject(MakkelijkKnop, 19, 30);
-        addObject(NormaalKnop, 25, 30);
-        addObject(MoeilijkKnop, 31, 30);
-        
-        Normaal.geklikt();
-    }
-    
-    public void makkelijk(){
-        HealthBar.setDifficulty(3);
-        Makkelijk.geklikt();
-        Normaal.undo();
-        Moeilijk.undo();
-        
-    }
-    
-    public void normaal(){
-        HealthBar.setDifficulty(2);
-        Makkelijk.undo();
-        Normaal.geklikt();
-        Moeilijk.undo();
-    }
-    
-    public void moeilijk(){
-        HealthBar.setDifficulty(1);
-        Makkelijk.undo();
-        Normaal.undo();
-        Moeilijk.geklikt();
     }
     
     public void start(){
