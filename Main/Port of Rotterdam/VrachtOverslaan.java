@@ -18,13 +18,6 @@ public class VrachtOverslaan extends World
     int scheepsVrachtTegenstander = 0;
     KraanGrijper_tegenstander tegenstander = new KraanGrijper_tegenstander();
     
-    Actor MakkelijkKnop = new MakkelijkKnop();
-    MakkelijkKnop Makkelijk = (MakkelijkKnop) MakkelijkKnop;
-    Actor NormaalKnop = new NormaalKnop();
-    NormaalKnop Normaal = (NormaalKnop) NormaalKnop;
-    Actor MoeilijkKnop = new MoeilijkKnop();
-    MoeilijkKnop Moeilijk = (MoeilijkKnop) MoeilijkKnop;
-    
     public VrachtOverslaan()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -222,35 +215,6 @@ public class VrachtOverslaan extends World
         addObject(new StartMenuAchtergrond(), 25, 20);
         addObject(new VrachtOverslaanTekst(), 25, 20);
         addObject(new StartKnop(), 30, 33);
-        
-        
-        addObject(MakkelijkKnop, 19, 30);
-        addObject(NormaalKnop, 25, 30);
-        addObject(MoeilijkKnop, 31, 30);
-        
-        Normaal.geklikt();
-    }
-    
-    public void makkelijk(){
-        tegenstander.setKraanSnelheid(0.1);
-        Makkelijk.geklikt();
-        Normaal.undo();
-        Moeilijk.undo();
-        
-    }
-    
-    public void normaal(){
-        tegenstander.setKraanSnelheid(0.2);
-        Makkelijk.undo();
-        Normaal.geklikt();
-        Moeilijk.undo();
-    }
-    
-    public void moeilijk(){
-        tegenstander.setKraanSnelheid(0.3);
-        Makkelijk.undo();
-        Normaal.undo();
-        Moeilijk.geklikt();
     }
     
     public void start(){

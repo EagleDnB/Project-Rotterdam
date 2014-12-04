@@ -15,13 +15,6 @@ public class Controlecentrum extends World
      */
     ScoreLabel ControlecentrumScore = new ScoreLabel();
     
-    Actor MakkelijkKnop = new MakkelijkKnop();
-    MakkelijkKnop Makkelijk = (MakkelijkKnop) MakkelijkKnop;
-    Actor NormaalKnop = new NormaalKnop();
-    NormaalKnop Normaal = (NormaalKnop) NormaalKnop;
-    Actor MoeilijkKnop = new MoeilijkKnop();
-    MoeilijkKnop Moeilijk = (MoeilijkKnop) MoeilijkKnop;
-    
     Actor spawner = new Spawner();
     Spawner spawnerObject = (Spawner) spawner;
     
@@ -161,42 +154,6 @@ public class Controlecentrum extends World
         addObject(new StartMenuAchtergrond(), 25, 20);
         addObject(new ControleCentrumTekst(), 25, 20);
         addObject(new StartKnop(), 30, 33);
-        
-      
-        
-        addObject(MakkelijkKnop, 19, 30);
-        addObject(NormaalKnop, 25, 30);
-        addObject(MoeilijkKnop, 31, 30);
-        
-        Normaal.geklikt();
-    }
-    
-    public void makkelijk(){
-        
-        Makkelijk.geklikt();
-        Normaal.undo();
-        Moeilijk.undo();
-        
-        spawnerObject.setDifficulty(800,800,800);
-        
-    }
-    
-    public void normaal(){
-        
-        Makkelijk.undo();
-        Normaal.geklikt();
-        Moeilijk.undo();
-        
-        spawnerObject.setDifficulty(600,600,600);
-    }
-    
-    public void moeilijk(){
-        
-        Makkelijk.undo();
-        Normaal.undo();
-        Moeilijk.geklikt();
-        
-        spawnerObject.setDifficulty(300,300,300);
     }
     
     public void start(){
